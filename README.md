@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Life Hub
 
 The interface uses plain HTML, CSS, and browser JavaScript. An optional Node.js/Express server adds a SQLite database for persistent data.
@@ -16,3 +17,7 @@ Opening `index.html` directly still works using browser `localStorage`, but that
 ## Before publishing online
 
 This starter backend is intended for one person's local use: it has no sign-in or per-user access controls, so clients connected to the same server share its records. Add authentication, per-user database ownership, HTTPS, and deployment-specific protections before making it public.
+=======
+# Student_Life_Hub
+A modern student productivity web app that helps college students manage assignments, attendance, exams, study plans, important links, and motivation in one place.
+>>>>>>> 369c2632825b9996c2a1d155c4e64b4caf49098c
