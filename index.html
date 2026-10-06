@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="description" content="A calmer, more colorful way to organize your student life. Track assignments, classes, exams, and study plans in one lovely place.">
+  <title>Student Life Hub — your day, in good hands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="index.html" data-nav="home" aria-label="Student Life Hub home">
+        <span class="brand-mark" aria-hidden="true">✿</span>
+        <span class="brand-copy">student life<span>hub</span></span>
+      </a>
+
+      <div class="nav-caption">YOUR SPACE</div>
+      <nav class="nav-list">
+        <a class="nav-link active" href="index.html" data-nav="home"><span class="nav-icon">⌂</span>Home</a>
+        <a class="nav-link" href="assignments.html" data-nav="assignments"><span class="nav-icon">▤</span>Assignments<span class="nav-count" id="navAssignmentCount">0</span></a>
+        <a class="nav-link" href="attendance.html" data-nav="attendance"><span class="nav-icon">◔</span>Attendance</a>
+        <a class="nav-link" href="exams.html" data-nav="exams"><span class="nav-icon">◷</span>Exam countdown</a>
+        <a class="nav-link" href="planner.html" data-nav="planner"><span class="nav-icon">▦</span>Study planner</a>
+        <a class="nav-link" href="links.html" data-nav="links"><span class="nav-icon">↗</span>Important links</a>
+        <a class="nav-link" href="motivation.html" data-nav="motivation"><span class="nav-icon">✧</span>Motivation</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-note">
+          <span class="note-sparkle" aria-hidden="true">✳</span>
+          <p>A little progress<br>is still progress.</p>
+          <span class="note-heart" aria-hidden="true">♡</span>
+        </div>
+        <div class="sidebar-profile">
+          <div class="avatar avatar-small" aria-hidden="true">S</div>
+          <div><strong>Student</strong><span>Your study space</span></div>
+          <span class="profile-dots" aria-hidden="true">···</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="welcome">
+          <p class="eyebrow" id="todayLabel">YOUR LITTLE CORNER OF THE INTERNET</p>
+          <h1 id="pageGreeting">Hello, student! <span aria-hidden="true">👋</span></h1>
+          <p class="welcome-subtitle" id="greetingSubtitle">Keep going... You're doing great!</p>
+        </div>
+        <div class="topbar-right">
+          <button class="today-pill" type="button" id="todayButton" aria-label="Go to today's study plan"><span class="today-dot"></span><span id="topbarDate">Today</span></button>
+          <div class="avatar avatar-top" aria-label="Student profile">S</div>
+        </div>
+      </header>
+
+      <div class="page-grid">
+        <section class="content-column" id="viewContainer" aria-live="polite"></section>
+        <aside class="right-rail" id="rightRail" aria-label="Your daily inspiration">
+          <section class="panel calendar-panel">
+            <div class="section-heading compact-heading">
+              <div><p class="eyebrow">YOUR MONTH AT A GLANCE</p><h2>Calendar</h2></div>
+              <div class="calendar-controls">
+                <button class="icon-button" id="calendarPrev" type="button" aria-label="Previous month">‹</button>
+                <button class="icon-button" id="calendarNext" type="button" aria-label="Next month">›</button>
+              </div>
+            </div>
+            <div class="calendar-month" id="calendarMonth"></div>
+            <div class="calendar-grid" id="calendarGrid" role="grid" aria-label="Calendar dates"></div>
+            <div class="calendar-key"><span><i class="key-dot key-today"></i>Today</span><span><i class="key-dot key-event"></i>Plan or exam</span></div>
+          </section>
+
+          <section class="quote-card" id="sideQuoteCard">
+            <div class="quote-decoration" aria-hidden="true">“</div>
+            <p class="eyebrow">A LITTLE REMINDER</p>
+            <blockquote id="sideQuote"></blockquote>
+            <button class="text-button" id="sideNewQuote" type="button">A fresh thought <span aria-hidden="true">↗</span></button>
+            <div class="quote-orb" aria-hidden="true"></div>
+          </section>
+
+          <section class="panel quick-links-panel">
+            <div class="section-heading compact-heading">
+              <div><p class="eyebrow">YOUR DIGITAL TOOLKIT</p><h2>Quick links</h2></div>
+              <a class="icon-button add-link-shortcut" href="links.html" data-nav="links" aria-label="Manage your links">+</a>
+            </div>
+            <div class="quick-link-list" id="quickLinkList"></div>
+            <a class="all-links-button" href="links.html" data-nav="links">Manage your links <span aria-hidden="true">→</span></a>
+          </section>
+
+          <section class="ad-slot" aria-label="Sponsored space">
+            <span class="ad-label">SPONSORED SPACE</span>
+            <span class="ad-sparkle" aria-hidden="true">✳</span>
+            <p>A little room for<br>something lovely.</p>
+            <span class="ad-footnote">Thoughtful finds for student life</span>
+          </section>
+          <p class="rail-footnote">Made for your student era <span aria-hidden="true">♡</span></p>
+        </aside>
+      </div>
+      <footer class="app-footer"><span>Made with care for the in-between moments <span aria-hidden="true">♡</span></span><span>Student Life Hub · Your data stays in this browser</span></footer>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
